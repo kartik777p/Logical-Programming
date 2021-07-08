@@ -1,22 +1,24 @@
 package com.nit.string;
 
-
+import java.util.Scanner;
 
 public class RevStringWithOutUsingMethod {
 
 	public static void main(String[] args) {
-		//craete a String veriable
-		String str="Kartik";
-		//get the lenghth of the string
+		//read date from enduser
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter a string ::- ");
+		String str=sc.nextLine();
+		//get the length of the string
 		int len=str.length();
+		System.out.println("Lengh of the string is ::-"+len);
+		//declare one veribale to hold rev string
 		String rev="";
-		System.out.println("Lenght of the String is ::- "+len);
-		//initialize rev veriable with default value
-		//use for loop for the reverse string
-		for(int i=len-1;i>=0;i--) {     //6-1(index start from 0)
-	     rev=rev+str.charAt(i);	
-		}//for
-		System.out.println("Reverse string is ::- "+rev);
+		//itrate for loop to reverse the string
+		for(int i=len-1;i>=0;i--) {
+			rev=rev+str.charAt(i);
+		}
+  System.out.println("Reverse STring is :- "+rev);
 	}
 
 }
